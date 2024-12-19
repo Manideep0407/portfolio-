@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000, #87CEEB);
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: skyblue;
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h1, .section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: skyblue;
+}
+
+.section p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Project Styles */
+.project {
+    margin-bottom: 30px;
+}
+
+.project-space {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.project p {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Links in Footer or Contact */
+a {
+    color: skyblue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+}
