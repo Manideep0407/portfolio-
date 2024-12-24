@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manideep Nellipalli's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="section">
+        <div class="intro">
+            <h1 class="name">Hey! I'm <span>Manideep Nellipalli</span></h1>
+            <p>Aspiring Electronics and Communication Engineer</p>
+        </div>
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>
+                I am a dedicated Electronics and Communication Engineer passionate about exploring technology, building innovative projects, and solving real-world problems.
+                My journey combines technical expertise in Python and design with a strong inclination toward creating impactful solutions.
+            </p>
+            <div class="resume">
+                <button class="resume-btn" onclick="downloadResume()">Download My Resume</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function downloadResume() {
+            const link = document.createElement("a");
+            link.href = "Manideep.Nellipalli.pdf"; // Ensure this file is in the same directory
+            link.download = "Manideep.Nellipalli.pdf";
+            link.click();
+        }
+    </script>
+    
+    <style>
+    /* Resume Button Styling */
+    .resume-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        outline: none;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Hover Effect */
+    .resume-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ripple Animation */
+    .resume-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+        z-index: 0;
+    }
+    
+    .resume-btn:hover::before {
+        width: 250%;
+        height: 250%;
+        opacity: 0;
+    }
+    
+    /* Button Text on Top */
+    .resume-btn span {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
+    
+    
+<!-- Education Section -->
+<section id="education">
+    <h2>🎓 Education</h2>
+    <div class="timeline">
+        <!-- Vel Tech -->
+        <div class="timeline-entry">
+            <div class="timeline-content">
+                <h3>Vel Tech University</h3>
+                <p>Bachelor's Degree in Electronics and Communication Engineering</p>
+                <span>(2021 - 2025)</span>
+            </div>
+        </div>
+
+        <!-- Sri Chaitanya -->
+        <div class="timeline-entry">
+            <div class="timeline-content">
+                <h3>Sri Chaitanya Junior College</h3>
+                <p>Intermediate of Science (MPC)</p>
+                <span>(2019 - 2021)</span>
+            </div>
+        </div>
+
+        <!-- Raju High School -->
+        <div class="timeline-entry">
+            <div class="timeline-content">
+                <h3>Raju High School</h3>
+                <p>High School (SSC Board)</p>
+                <span>(2017 - 2019)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="content">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <img src="logos/Pythonlogo.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="logos/htmllogo-0.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="logos\css3logo.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="logos/mysql1.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill">
+                    <img src="logos/Tableau.png"alt="Tableau">
+                    <p>Tableau</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="content">
+            <h2>Certifications</h2>
+
+            <!-- My Certificates -->
+            <div class="certification-container" id="my-certificates">
+                <h3>My Certificates</h3>
+                <div class="certification-slider">
+                    <div class="certification active">
+                        <img src="certifications/iot.jpg" alt="Certificate 1">
+                        <p>NPETL Internet of Things</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/aiandres.jpg" alt="Certificate 2">
+                        <p>NPETL Responsible & Safe AI System</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/infosys.jpeg" alt="Certificate 3">
+                        <p>Infosys Young Python Professional</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/tessolve.jpg" alt="Certificate 4">
+                        <p>Training on Tessolve Embedded IOT & Industrial Automation</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/codingweekly.jpg" alt="Certificate 5">
+                        <p>Winner of Weekly Coding Contest</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/artifical.jpg" alt="Certificate 6">
+                        <p>Training on artifical Intelligence For Biomedical Application</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeCertificate(-1, 'my-certificates')">&#8249;</button>
+                <button class="next" onclick="changeCertificate(1, 'my-certificates')">&#8250;</button>
+            </div>
+
+            <!-- Extra Curricular -->
+            <div class="certification-container" id="extra-certificates">
+                <h3>Extra Curricular</h3>
+                <div class="certification-slider">
+                    <div class="certification active">
+                        <img src="certifications/splcamp.jpg" alt="Extra Curricular 1">
+                        <p>NSS Special Camp 2023</p>
+                    </div>
+                    <div class="certification">
+                        <img src="certifications/motherteresa.jpg" alt="Extra Curricular 2">
+                        <p>NSS Feed the Need </p>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeCertificate(-1, 'extra-certificates')">&#8249;</button>
+                <button class="next" onclick="changeCertificate(1, 'extra-certificates')">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="project">
+                <a href="project/Oralcancer">
+                    <img src="logos/oral.jpg" alt="Oral Cancer Project">
+                </a>
+                <p>Oral Cancer Segmentation and Classification</p>
+            </div>
+            <div class="project">
+                <a href="project/Brain tumor">
+                    <img src="logos/braintumor.jpg" alt="Brain Tumor Project">
+                </a>
+                <p>Brain Tumor Classification</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="content">
+            <h2>Contact</h2>
+            <div class="contact-details">
+                <p>Email: manideepnellipalli1@gmail.com</p>
+                <p>Phone: +91 9346541586</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Manideep0407" target="_blank">
+                        <img src="logos/github.jpg" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/manideep-nellipalli-3a33b5270/" target="_blank">
+                        <img src="logos/linkdin.jpg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/nani_nellipalli/profilecard/?igsh=MXNldWg0OTR5aXpzZg==" target="_blank">
+                        <img src="logos/ins.jpg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Manideep Nellipalli</p>
+    </footer>
+
+</body>
+</html>

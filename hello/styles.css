@@ -1,0 +1,383 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* Home Section */
+#home {
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#home .name span {
+    color: skyblue;
+}
+
+
+/* Education Section */
+#education {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: skyblue;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Remove vertical line */
+.timeline::after {
+    content: none;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    position: relative;
+    animation: fade-in 1s ease-out forwards;
+    opacity: 0; /* For animation */
+}
+
+.timeline-entry:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.timeline-entry:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.timeline-entry:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.timeline-content {
+    display: inline-block;
+    padding: 20px;
+    background-color: black;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin: 0 10px;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    color: skyblue;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    color: white;
+}
+
+.timeline-content span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Remove timeline images */
+.timeline-img {
+    display: none;
+}
+
+/* Animation */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: skyblue;
+}
+
+/* Resume Button Styling */
+.resume-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.resume-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple Animation */
+.resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    z-index: 0;
+}
+
+.resume-btn:hover::before {
+    width: 250%;
+    height: 250%;
+    opacity: 0;
+}
+
+/* Button Text on Top */
+.resume-btn span {
+    position: relative;
+    z-index: 1;
+}
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.section .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    color: skyblue;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Skills Section */
+#skills .skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#skills .skill {
+    text-align: center;
+}
+
+#skills img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#skills p {
+    font-size: 18px;
+    color: white;
+}
+
+.certification-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.certification-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.certification {
+    min-width: 100%;
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.certification.active {
+    display: block;
+    opacity: 1;
+}
+
+.certification img {
+    width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.certification p {
+    font-size: 16px;
+    color: white;
+}
+
+/* Navigation Arrows */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+/* Projects Section */
+#projects .project {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#projects img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#projects img:hover {
+    transform: scale(1.05);
+}
+
+#projects p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Contact Section */
+#contact .contact-details {
+    font-size: 20px;
+    color: white;
+}
+
+#contact .contact-details h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: skyblue;
+}
+
+#contact .contact-details p {
+    font-size: 20px;
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
